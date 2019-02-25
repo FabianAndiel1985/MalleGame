@@ -14,17 +14,34 @@
 	<title></title>
 </head>
 <body>
-	<h1>Erstelle deinen Helden</h1>
+	<h1>Create your hero</h1>
 
-	Your hero`s name <input type="text" name="name" id="heroName">
-	Your hero`s power <input type="number" name="power">
-	Your hero`s endurance <input type="number" name="endurance">
-	Your hero`s lives <input type="number" name="lives">
+	Your hero`s name <input type="text" name="name" id="heroName" >
+	Your hero`s power <input type="number" name="power" id="heroPower">
+	Your hero`s endurance <input type="number" name="endurance" id="heroEndurance">
+	Your hero`s lives <input type="number" name="lives" id="heroLives">
+
+	<button onclick="test()"> Testklick </button>
 
 
 	<script type="text/javascript">
 
-		
+			var heroName = $("#heroName").val();
+			var heroPower = document.getElementById("heroPower").value;
+			var heroEndurance = $("#heroEndurance").val();
+			var heroLives = document.getElementById("heroLives").value;
+
+			
+
+		// with this function I wanted to test the entries in the various fields, but when I do it in google the alert boxes are empty
+		// function test() {
+		// 		var heroValues = [heroName,heroPower, heroEndurance, heroLives];
+		// 		for(i=0; i< heroValues.length; i++)
+		// 			{
+		// 				alert(heroValues[i]);
+		// 			};
+
+		// 	}
 
 
 
