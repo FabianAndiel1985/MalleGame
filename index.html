@@ -21,24 +21,41 @@
 	Your hero`s endurance <input type="number" name="endurance" id="heroEndurance">
 	Your hero`s lives <input type="number" name="lives" id="heroLives">
 
-	<button onclick="test()"> Testklick </button>
+	<button onclick="test()"> Create </button>
 
 
 	<script type="text/javascript">
 
-			var heroName = $("#heroName").val();
-			var heroPower = document.getElementById("heroPower").value;
-			var heroEndurance = $("#heroEndurance").val();
-			var heroLives = document.getElementById("heroLives").value;
+		function Hero(name, power, endurance, lives) {
+  			this.name = name;
+  			this.power = power;
+  			this.endurance = endurance;
+  			this.lives = lives;
+		}
 
-			
+
+		function test() {
+			var name1 = $("#heroName").val();
+		 	var power1 = document.getElementById("heroPower").value;
+		 	var endurance1 = $("#heroEndurance").val();
+		 	var lives1 = document.getElementById("heroLives").value;
+
+		 	var mainCharacter = new Hero(name1,power1,endurance1,lives1);
+
+		 	alert(mainCharacter.name + mainCharacter.power + mainCharacter.endurance + mainCharacter.lives);
+
+		};
+
+
+
 
 		// with this function I wanted to test the entries in the various fields, but when I do it in google the alert boxes are empty
+
 		// function test() {
 		// 		var heroValues = [heroName,heroPower, heroEndurance, heroLives];
 		// 		for(i=0; i< heroValues.length; i++)
 		// 			{
-		// 				alert(heroValues[i]);
+		// 				console.log(heroValues[i]);
 		// 			};
 
 		// 	}
