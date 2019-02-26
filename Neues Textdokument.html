@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
 	<title></title>
 </head>
 <body>
 
 	<img src="Malle.jpg">
-	You meet some drunk funny germans!
-	<button id="talkSc2"> Talk to them </button> 
+	<p>You meet some drunk funny germans!</p>
+	<br>
+	<button id="talk1Sc2"> Talk to them </button>
+	<br> 
+	<button id="talk2Sc2"> Listen to their song </button>
 
+
+	
 	<script type="text/javascript">
-		document.getElementById("talkSc2").onclick= function () {alert("Hallo")};
 
+		document.getElementById("talk1Sc2").onclick= function () {
+				function talkin() {
+					alert("Ey Alda");	
+				};
+				return talkin();	
+				}
+			
 
 	</script>
 
