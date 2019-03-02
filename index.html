@@ -64,7 +64,7 @@
 		 	switch (isNaN(name1) || parseInt(name1) )
 		 	{
 		 		case true: 
-		 		x2 = 1;
+		 		z = 1;
 		 		break;
 		 		default:
 		 		alert("Bitte gib einen Namen ein");
@@ -74,7 +74,7 @@
 
 		 	var mainCharacter = new Hero(name1,power1,endurance1,lives1);
 
-		 	if (x2 == 1) {
+		 	if (z == 1) {
 		 	alert("His name is " + mainCharacter.name + " his power is " + mainCharacter.power + " his endurance is " + mainCharacter.endurance + " and his lives are " + mainCharacter.lives);
 		 	x = 7;
 		 	return x;
@@ -87,7 +87,7 @@
 		document.getElementById("Sc1Sc2").onclick = function () {
 		if (x==7){$("#allContent").html("<img src='Malle.jpg'> <p>You meet some drunk funny germans!</p><br><button id='talk1Sc2'> Talk to them </button><br> <br> <button id='talk2Sc2'> Listen to their song </button><br><br> <button id='walk1Sc2'> Continue your path</button>"); 
 			// Controll variables scene 2
-			var x1 = 0; var x2 = 0;
+			var x1 = 0; var y1 = 0;
 
 			// SC2 Talk to the germans
 			document.getElementById("talk1Sc2").onclick = function() {
@@ -110,9 +110,24 @@
 				}
 				while (i > -1);
 			};
-			// Wechsel SC2 zu Sc3 HIER WEITER !!!!
-			document.getElementById("walk1Sc2").onclick= function() {alert("Hallo");}
 
+			// Wechsel SC2 zu Sc3 HIER WEITER !!!!
+			document.getElementById("walk1Sc2").onclick= function() {
+				if (x1 == 1 && y1 == 1) {
+					alert("Du hast alles durchgefuehrt");	
+				}
+
+
+				else if (x1 == 0 && y1 == 0) {
+					alert("Mach was!!!!!!!!!!!!");
+				}
+
+				// Teodora WARUM KLAPPT DAS ELSE IN DIESEM ZUSAMMENHANG NICHT
+				// else {
+				// 	alert("Mach noch den Rest");
+				// }
+
+				}
 		}
 		else if (x == 0) {
 			alert("Please create your hero");
