@@ -59,12 +59,26 @@
 		 	var endurance1 = $("#heroEndurance").val();
 		 	var lives1 = document.getElementById("heroLives").value;
 
+		 	// CHECK IF THERE`s a STRING IN HERO NAME
+
+		 	switch (isNaN(name1) || parseInt(name1) )
+		 	{
+		 		case true: 
+		 		x2 = 1;
+		 		break;
+		 		default:
+		 		alert("Bitte gib einen Namen ein");
+		 		break;
+		 	}
+
 
 		 	var mainCharacter = new Hero(name1,power1,endurance1,lives1);
 
+		 	if (x2 == 1) {
 		 	alert("His name is " + mainCharacter.name + " his power is " + mainCharacter.power + " his endurance is " + mainCharacter.endurance + " and his lives are " + mainCharacter.lives);
 		 	x = 7;
 		 	return x;
+		 	}
 
 		};
 
