@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
 	<!-- JQUERY EMBEDDING,tested -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -10,24 +12,37 @@
 	<!-- JAVASCRIPT EMBEDDING,tested  -->
 	<script language="javascript" type="text/javascript" src="javas.js"></script>.
 
+<!-- TESTEN OB EXTERNES JS HIER HINEIN -->
+
 
 	<title></title>
 </head>
 <body>
-	<h1>Create your hero</h1>
 
-	Your hero`s name <input type="text" name="name" id="heroName" >
-	Your hero`s power <input type="number" name="power" id="heroPower">
-	Your hero`s endurance <input type="number" name="endurance" id="heroEndurance">
-	Your hero`s lives <input type="number" name="lives" id="heroLives">
+	<div id="allContent">
 
-	<button onclick="test()"> Create </button>
-	<br>
-	<br>
-	<br>
-	<button> Go on  </button>
+		<h1>Create your hero</h1>
+
+		Your hero`s name <input type="text" name="name" id="heroName" >
+		Your hero`s power <input type="number" name="power" id="heroPower">
+		Your hero`s endurance <input type="number" name="endurance" id="heroEndurance">
+		Your hero`s lives <input type="number" name="lives" id="heroLives">
+
+		<button onclick="test()"> Create </button>
+		<br>
+		<br>
+		<br>
+		<button id="Sc1Sc2"> Go on  </button>
+
+	</div>
 
 	<script type="text/javascript">
+
+		// Control variable of the menue
+
+		var x=0;
+
+		// Hero object constructor
 
 		function Hero(name, power, endurance, lives) {
   			this.name = name;
@@ -36,6 +51,7 @@
   			this.lives = lives;
 		}
 
+		// Create the hero function
 
 		function test() {
 			var name1 = $("#heroName").val();
@@ -43,25 +59,55 @@
 		 	var endurance1 = $("#heroEndurance").val();
 		 	var lives1 = document.getElementById("heroLives").value;
 
+
 		 	var mainCharacter = new Hero(name1,power1,endurance1,lives1);
 
-		 	alert(mainCharacter.name + mainCharacter.power + mainCharacter.endurance + mainCharacter.lives);
+		 	alert("His name is " + mainCharacter.name + " his power is " + mainCharacter.power + " his endurance is " + mainCharacter.endurance + " and his lives are " + mainCharacter.lives);
+		 	x = 7;
+		 	return x;
 
 		};
 
+		// Change Scene 1 to Scene 2 FUNKTION WECHSELT ENTWEDER AUF SZENE 2 ODER BLEIBT BEI SZENE 1 BEI ELSE IF WENN X 0 BLEIBT
+
+		document.getElementById("Sc1Sc2").onclick = function () {
+		if (x==7){$("#allContent").html("<img src='Malle.jpg'> <p>You meet some drunk funny germans!</p><br><button id='talk1Sc2'> Talk to them </button><br> <br> <button id='talk2Sc2'> Listen to their song </button><br><br> <button id='walk1Sc2'> Continue your path</button>"); 
+			// Controll variables scene 2
+			var x1 = 0; var x2 = 0;
+
+			// SC2 Talk to the germans
+			document.getElementById("talk1Sc2").onclick = function() {
+				alert("Ey old man"); 
+				x1 = 1; 
+				return x1
+			};
+			// SC 2 Germans sing drunken
+			document.getElementById("talk2Sc2").onclick = function() { 
+				var i = 7;
+				do {
+				alert(i +" beer in the closet");
+				i--;
+				if (i === 0) {
+					alert("No beer here anymore");
+					y1 = 1;
+					return y1;
+					break;
+					}
+				}
+				while (i > -1);
+			};
+			// Wechsel SC2 zu Sc3 HIER WEITER !!!!
+			document.getElementById("walk1Sc2").onclick= function() {alert("Hallo");}
+
+		}
+		else if (x == 0) {
+			alert("Please create your hero");
+		}
+	}
 
 
+// SCENE 2 GREETING BY DRUNKEN GERMANS		
 
-		// with this function I wanted to test the entries in the various fields, but when I do it in google the alert boxes are empty
-
-		// function test() {
-		// 		var heroValues = [heroName,heroPower, heroEndurance, heroLives];
-		// 		for(i=0; i< heroValues.length; i++)
-		// 			{
-		// 				console.log(heroValues[i]);
-		// 			};
-
-		// 	}
 
 
 
