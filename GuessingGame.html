@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<!-- JQUERY EINBINDUNG -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<style type="text/css">
+
+		body {
+			background-color: green;
+		}
+
+		p {
+			
+			text-align:center;
+		}
+
+		#mystery  {
+			text-align: center;
+			height:auto;
+			width:50%;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+		<div id="mystery">
+			<img src="mystery.png" >
+		</div>
+
+		<p> Guess a number I`m thinking of</p>
+
+
+	<script type="text/javascript">
+		$("img").mouseover( function () {
+			var choice = prompt("Insert your guess here");
+			var min=1; 
+			var max=3;
+			var randomNumber = Math.floor(Math.random() * (+max - +min)) + + min;
+			// alert(randomNumber);
+			if ( randomNumber == choice) {
+				alert("Super passt alles!");
+			}
+
+			else {
+				alert("Andere Alternative");
+			}
+
+		})
+
+
+
+			 // function randomNumber() {
+			 // 	var min=1; 
+			 // 	var max=3;  
+			 // 	var randomNumber1 = 4;
+			 // 	alert(randomNumber1);
+			 	// Math.floor(Math.random() * (+max - +min)) ++min;
+			 	// return random; 
+
+			 // if(random == choice)
+			 // 	{
+			 // 		alert("Super");
+			 // 	}
+
+			 // else {
+			 // 		alert("Noch nicht!");
+			 // }
+		// })
+
+
+	</script>
+
+
+</body>
+</html>
