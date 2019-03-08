@@ -114,9 +114,21 @@
 			// Wechsel SC2 zu Sc3 HIER WEITER !!!!
 			document.getElementById("walk1Sc2").onclick= function() {
 				if (x1 == 1 && y1 == 1) {
+					document.getElementById("allContent").innerHTML="<div id='mystery'> <img src='mystery.png' id='mystery1' > </div> <p> Guess a number I`m thinking of</p>"; document.getElementById("mystery1").onclick = function() {
+							var choice = prompt("Insert your guess here");
+							var min=1; 
+							var max=3;
+							var randomNumber = Math.floor(Math.random() * (+max - +min)) + + min;
+							if ( randomNumber == choice) {
+								alert("Super passt alles!");
+								
+							}
 
-					$("#allContent").html("<p>Hi</p>");
-		
+							else {
+								alert("Andere Alternative");
+							}
+
+						;}
 				}
 
 
@@ -124,20 +136,12 @@
 					alert("Mach was!!!!!!!!!!!!");
 				}
 
-				// Teodora WARUM KLAPPT DAS ELSE IN DIESEM ZUSAMMENHANG NICHT
-				// else {
-				// 	alert("Mach noch den Rest");
-				// }
-
 				}
 		}
 		else if (x == 0) {
 			alert("Please create your hero");
 		}
 	}
-
-
-// SCENE 2 GREETING BY DRUNKEN GERMANS		
 
 
 
