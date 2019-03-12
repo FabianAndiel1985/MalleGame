@@ -148,12 +148,46 @@
 
 	function Sc3Sc4 () {
 		// HIER KOMMT DIE SZENE 4 REIN
-		$("#allContent").html("      ")
-	
+		$("#allContent").html("<div id='contentSc4'> <p> You get to a fork in the road and have to choose ....</p> <img src='ForkRoad.jpg'> <br><br> <button id='Sc4Sc5'> Gehe zum Traingsraum</button> <br><br> <button id='Sc4Sc6'> Gehe gleich weiter zum Gegner (wer braucht schon Training) </button> </div>");}
+
+		// Function for change to scene5 frome scene 4
+
+			document.getElementById("Sc4Sc5").onclick = function() {
+				Sc4Sc5();
+			}
+			
+			// Function for immmediate change to scene6 from scene
+
+			document.getElementById("Sc4Sc6").onclick=function () {
+				Sc4Sc6();
+			}
+			
+			// real scene 5
+			
+			function Sc4Sc5(){
+				alert("Hallo1");
+				// Hier kommt die 5.te Trainingsraumszene rein
+			}
+			// real scene 6
+
+			function Sc4Sc6(){
+				alert("Hallo2");
+				// Hier kommt die 5.te Trainingsraumszene rein
+			}
 
 
 
-	}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
