@@ -24,13 +24,34 @@
 	</div>	
 
 		<script type="text/javascript">
-			document.getElementbyId("Sc4Sc5").onclick=function () {
-				alert("Hallo1");
+			
+			// Function for change to scene5
+
+			document.getElementById("Sc4Sc5").onclick = function() {
+				Sc4Sc5();
 			}
 			
-			document.getElementbyId("Sc4Sc6").onclick=function () {
-				alert("Hallo2"):
+			// Function for immmediate change to scene6
+
+			document.getElementById("Sc4Sc6").onclick=function () {
+				Sc4Sc6();
 			}
+			
+			// real scene 5
+			
+			function Sc4Sc5(){
+				alert("Hallo1");
+				// Hier kommt die 5.te Trainingsraumszene rein
+			}
+			// real scene 6
+
+			function Sc4Sc6(){
+				alert("Hallo2");
+				// Hier kommt die 5.te Trainingsraumszene rein
+			}
+
+
+
 
 
 		</script>
