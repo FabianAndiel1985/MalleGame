@@ -1,52 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 	<title></title>
+
+	<!-- JQUERY EMBEDDING,tested -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- CSS EMBEDDING,tested -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
 </head>
 <body>
 
-	<img src="Malle.jpg">
-	<p>You meet some drunk funny germans!</p>
-	<br>
-	<button id="talk1Sc2"> Talk to them </button>
-	<br> 
-	<br> 
-	<button id="talk2Sc2"> Listen to their song </button>
+	<div id="contentSc4">
+		<p> You get to a fork in the road and have to choose ....</p>
 
+		<img src="ForkRoad.jpg"> <br><br>
 
-	
-	<script type="text/javascript">
+		<button id="Sc4Sc5"> Gehe zum Traingsraum</button> <br><br>
+		<button id="Sc4Sc6"> Gehe gleich weiter zum Gegner (wer braucht schon Training)
+		</button>
 
-		document.getElementById("talk1Sc2").onclick= function () {
-				function talkin() {
-					alert("Yo Bro");	
-				};
-				return talkin();	
-				};
+	</div>	
 
-
-
-		$("#talk2Sc2").click(function () {
-			var i = 7;
-			do {
-				alert(i +" beer in the closet");
-				i--;
-
-				if (i === 0) {
-					alert("No beer here anymore");
-					break;
-				}
+		<script type="text/javascript">
+			document.getElementbyId("Sc4Sc5").onclick=function () {
+				alert("Hallo1");
+			}
+			
+			document.getElementbyId("Sc4Sc6").onclick=function () {
+				alert("Hallo2"):
 			}
 
-			while (i > -1);
-		});
-			
 
-	</script>
+		</script>
+
 
 </body>
 </html>
-
