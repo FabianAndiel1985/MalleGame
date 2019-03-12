@@ -10,6 +10,15 @@ input {
 	display:block;
 }*/
 
+#Sc4 {
+	text-align:center;
+}
+
 #contentSc4 {
 	text-align:center;
+}
+
+#workoutroom, #magican {
+	width: 20%;
+	height:auto;
 }
