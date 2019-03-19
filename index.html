@@ -44,20 +44,22 @@
 
 		// Hero object constructor
 
-		function Hero(name, power, endurance, lives) {
+		function Hero(name, power, endurance, lives, workedout) {
   			this.name = name;
   			this.power = power;
   			this.endurance = endurance;
   			this.lives = lives;
+  			this.workedout = workedout;
 		}
 
-		// Create the hero function
+		// Create the hero function; takes the values from the players entries except for workedout;
 
 		function test() {
 			var name1 = $("#heroName").val();
 		 	var power1 = document.getElementById("heroPower").value;
 		 	var endurance1 = $("#heroEndurance").val();
 		 	var lives1 = document.getElementById("heroLives").value;
+		 	var workedout = false;
 
 		 	// CHECK IF THERE`s a STRING IN HERO NAME
 
