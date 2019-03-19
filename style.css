@@ -22,3 +22,14 @@ input {
 	width: 20%;
 	height:auto;
 }
+
+/*Einstellungen für Szene 6*/
+
+#sc6container {
+	text-align: center;
+}
+
+#sc6opponent {
+	width: 30%;
+	height: auto;
+}
