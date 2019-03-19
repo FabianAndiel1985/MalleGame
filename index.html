@@ -59,7 +59,7 @@
 		 	var power1 = document.getElementById("heroPower").value;
 		 	var endurance1 = $("#heroEndurance").val();
 		 	var lives1 = document.getElementById("heroLives").value;
-		 	var workedout = false;
+		 	var workedout1 = false;
 
 		 	// CHECK IF THERE`s a STRING IN HERO NAME
 
@@ -74,7 +74,7 @@
 		 	}
 
 
-		 	var mainCharacter = new Hero(name1,power1,endurance1,lives1);
+		 	var mainCharacter = new Hero(name1,power1,endurance1,lives1,workedout1);
 
 		 	if (z == 1) {
 		 	alert("His name is " + mainCharacter.name + " his power is " + mainCharacter.power + " his endurance is " + mainCharacter.endurance + " and his lives are " + mainCharacter.lives);
