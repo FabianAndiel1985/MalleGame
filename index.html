@@ -12,7 +12,6 @@
 	<!-- JAVASCRIPT EMBEDDING,tested  -->
 	<script language="javascript" type="text/javascript" src="javas.js"></script>.
 
-<!-- TESTEN OB EXTERNES JS HIER HINEIN -->
 
 
 	<title></title>
@@ -58,7 +57,7 @@
 			var name1 = $("#heroName").val();
 		 	var power1 = document.getElementById("heroPower").value;
 		 	var endurance1 = $("#heroEndurance").val();
-		 	var lives1 = document.getElementById("heroLives").value;
+		 	var lives1 = parseInt(document.getElementById("heroLives").value);
 		 	var workedout1 = false;
 
 		 	// CHECK IF THERE`s a STRING IN HERO NAME
@@ -74,12 +73,13 @@
 		 	}
 
 
-		 	var mainCharacter = new Hero(name1,power1,endurance1,lives1,workedout1);
+		 	mainCharacter = new Hero(name1,power1,endurance1,lives1,workedout1);
 
 		 	if (z == 1) {
 		 	alert("His name is " + mainCharacter.name + " his power is " + mainCharacter.power + " his endurance is " + mainCharacter.endurance + " and his lives are " + mainCharacter.lives);
 		 	x = 7;
 		 	return x;
+		 	return mainCharacter;
 		 	}
 
 		};
@@ -93,7 +93,7 @@
 
 			// SC2 Talk to the germans
 			document.getElementById("talk1Sc2").onclick = function() {
-				alert("Ey old man"); 
+				alert("Ey Dude"); 
 				x1 = 1; 
 				return x1
 			};
@@ -113,21 +113,21 @@
 				while (i > -1);
 			};
 
-			// Wechsel SC2 zu Sc3 HIER WEITER !!!!
+			// Change SC2 to Sc3 !!!!
 			document.getElementById("walk1Sc2").onclick= function() {
 				if (x1 == 1 && y1 == 1) {
-					document.getElementById("allContent").innerHTML="<div id='mystery'> <img src='mystery.png' id='mystery1' > </div> <p> Guess a number I`m thinking of</p>"; document.getElementById("mystery1").onclick = function() {
+					document.getElementById("allContent").innerHTML="<div id='mystery'> <img src='mystery.png' id='mystery1' > </div> <p> Guess a number I`m thinking of between 1 and 3</p>"; document.getElementById("mystery1").onmouseover = function() {
 							var choice = prompt("Insert your guess here");
 							var min=1; 
 							var max=3;
 							var randomNumber = Math.floor(Math.random() * (+max - +min)) + + min;
 							if ( randomNumber == choice) {
-								alert("Super passt alles!");
+								alert("Alright, you shall pass!");
 								Sc3Sc4();
 							}
 
 							else {
-								alert("Andere Alternative");
+								alert("Try again");
 							}
 
 						;}
@@ -135,7 +135,7 @@
 
 
 				else if (x1 == 0 && y1 == 0) {
-					alert("Mach was!!!!!!!!!!!!");
+					alert("Just talk to them!");
 				}
 
 				}
@@ -158,7 +158,7 @@
 	// HIER WEITERie 5.te Trainingsraumszene rein
 	
 	function Sc4Sc5(){
-				alert("Hallo1");			
+				alert("Hallo");			
 			}
 
 	function Sc4Sc6(){
