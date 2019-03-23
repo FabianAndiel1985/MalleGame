@@ -60,7 +60,7 @@
 		 	var lives1 = parseInt(document.getElementById("heroLives").value);
 		 	var workedout1 = false;
 
-		 	// CHECK IF THERE`s a STRING IN HERO NAME
+		 // Check if there`s a string in hero name
 
 		 	switch (isNaN(name1) || parseInt(name1) )
 		 	{
@@ -71,7 +71,6 @@
 		 		alert("Bitte gib einen Namen ein");
 		 		break;
 		 	}
-
 
 		 	mainCharacter = new Hero(name1,power1,endurance1,lives1,workedout1);
 
@@ -84,14 +83,14 @@
 
 		};
 
-		// Change Scene 1 to Scene 2 FUNKTION WECHSELT ENTWEDER AUF SZENE 2 ODER BLEIBT BEI SZENE 1 BEI ELSE IF WENN X 0 BLEIBT
+		// Change Scene 1 to Scene 2 function changes either to scene 2 or stays with scene 1 if x remains 0
 
 		document.getElementById("Sc1Sc2").onclick = function () {
 		if (x==7){$("#allContent").html("<img src='Malle.jpg'> <p>You meet some drunk funny germans!</p><br><button id='talk1Sc2'> Talk to them </button><br> <br> <button id='talk2Sc2'> Listen to their song </button><br><br> <button id='walk1Sc2'> Continue your path</button>"); 
 			// Controll variables scene 2
 			var x1 = 0; var y1 = 0;
 
-			// SC2 Talk to the germans
+			// Sc2 Talk to the germans
 			document.getElementById("talk1Sc2").onclick = function() {
 				alert("Ey Dude"); 
 				x1 = 1; 
@@ -146,16 +145,16 @@
 	}
 
 
-	// Launch Szene 4 mit einer Funktion
+	// Launch Scene 4 with a function
 
 	function Sc3Sc4 () {
-		// HIER KOMMT DIE SZENE 4 REIN
+		// here comes scene 4
 		document.getElementById("allContent").innerHTML="	<div id='contentSc4'> <p> You get to a fork in the road and have to choose ....</p> <img src='ForkRoad.jpg'> <br><br> <button id='Sc4Sc5'> Gehe zum Traingsraum</button> <br><br> <button id='Sc4Sc6'> Gehe gleich weiter zum Gegner (wer braucht schon Training) </button> </div>"; document.getElementById("Sc4Sc5").onclick = function() {Sc4Sc5();} ; document.getElementById("Sc4Sc6").onclick=function () { Sc4Sc6();}
 		}
 
 	
 
-	// HIER WEITERie 5.te Trainingsraumszene rein
+	
 	
 	function Sc4Sc5(){
 				alert("Hallo");			
