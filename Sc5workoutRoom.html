@@ -39,13 +39,13 @@
 
 	<script type="text/javascript">
 		
-		var x = 20;
+		var workoutPoints = 20;
 
 		$("#power").click(function() { 
-			if (x>0) 
+			if (workoutPoints>0) 
 				{
-					x = x-5; 
-					document.getElementById("showpPoints").innerHTML="You have " + x + " points to distribute";
+					workoutPoints = workoutPoints-5; 
+					document.getElementById("showpPoints").innerHTML="You have " + workoutPoints + " points to distribute";
 				} else { 
 					alert("you have already trained enough");
 				}
@@ -55,10 +55,10 @@
 		
 
 		$("#endurance").click(function() { 
-			if (x>0) 
+			if (workoutPoints>0) 
 				{
-					x = x-5; 
-					document.getElementById("showpPoints").innerHTML="You have " + x + " points to distribute";
+					workoutPoints = workoutPoints-5; 
+					document.getElementById("showpPoints").innerHTML="You have " + workoutPoints + " points to distribute";
 				} else { 
 					alert("you have already trained enough");
 				}
