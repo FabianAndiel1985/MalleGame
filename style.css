@@ -23,9 +23,9 @@ input {
 	height:auto;
 }
 
-/*Einstellungen für Szene 6*/
+/*Settings for Scene 5 and Scene 6*/
 
-#sc6container {
+#sc5container, #sc6container {
 	text-align: center;
 }
 
