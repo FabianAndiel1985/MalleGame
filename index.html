@@ -55,8 +55,8 @@
 
 		function test() {
 			var name1 = $("#heroName").val();
-		 	var power1 = document.getElementById("heroPower").value;
-		 	var endurance1 = $("#heroEndurance").val();
+		 	var power1 = parseInt(document.getElementById("heroPower").value);
+		 	var endurance1 = parseInt($("#heroEndurance").val());
 		 	var lives1 = parseInt(document.getElementById("heroLives").value);
 		 	var workedout1 = false;
 
@@ -149,21 +149,24 @@
 
 	function Sc3Sc4 () {
 		// here comes scene 4
-		document.getElementById("allContent").innerHTML="	<div id='contentSc4'> <p> You get to a fork in the road and have to choose ....</p> <img src='ForkRoad.jpg'> <br><br> <button id='Sc4Sc5'> Gehe zum Traingsraum</button> <br><br> <button id='Sc4Sc6'> Gehe gleich weiter zum Gegner (wer braucht schon Training) </button> </div>"; document.getElementById("Sc4Sc5").onclick = function() {Sc4Sc5();} ; document.getElementById("Sc4Sc6").onclick=function () { Sc4Sc6();}
+		document.getElementById("allContent").innerHTML="	<div id='contentSc4'> <p> You get to a fork in the road and have to choose ....</p> <img src='ForkRoad.jpg'> <br><br> <button id='Sc4Sc5'> Gehe zum Traingsraum</button> <br><br> <button id='Sc4Sc6'> Gehe gleich weiter zum Gegner (wer braucht schon Training) </button> </div>"; document.getElementById("Sc4Sc5").onclick = function() {Sc4Sc5();}; document.getElementById("Sc4Sc6").onclick = function() {Sc4Sc6();}
 		}
 
-	// switch to scene 5 with workout function			
+	// switch from scene 4 to scene 5 with workout function			
 
 	function Sc4Sc5(){
-				document.getElementById("allContent").innerHTML="<div id='sc5container'> <img src='workoutroom.jpg' id='workoutroom'> <img src='magican.jpg' id='magican'> <p>Now you can workout!! <span id='showpPoints'>You have 20 points to distribute </span></p> <button id='power'> Power </button> <br> <br> <button id='endurance'> Endurance</button> <br> <br> <button id='lives'> Yoga</button> </div>"; var workoutPoints = 20;
+				document.getElementById("allContent").innerHTML="<div id='sc5container'> <img src='workoutroom.jpg' id='workoutroom'> <img src='magican.jpg' id='magican'> <p>Now you can workout!! <span id='showpPoints'>You have 20 points to distribute </span></p> <button id='power'> Power </button> <br> <br> <button id='endurance'> Endurance</button> <br> <br> <button id='lives'> Yoga</button> <br><br> <button onclick='test1()'>Test the hero</button> </div>"; var workoutPoints = 20;
 
 					// Scene5 function to increase power		 
 
-					$("#power").click(function() {if (workoutPoints>0) 
+					$("#power").click(function() {
+						if (workoutPoints>0) 
 						{
-						workoutPoints = workoutPoints-5; 
+						workoutPoints = workoutPoints-5;
+						mainCharacter.power = mainCharacter.power +5;  
 						document.getElementById("showpPoints").innerHTML="You have " + workoutPoints + " points to distribute";
-						}
+						mainCharacter.workedout = true;
+					}
 						else { 
 						alert("you have already trained enough");
 						};
@@ -178,7 +181,9 @@
 					if (workoutPoints>0) 
 					{
 					workoutPoints = workoutPoints-5; 
+					mainCharacter.endurance = mainCharacter.endurance +5;
 					document.getElementById("showpPoints").innerHTML="You have " + workoutPoints + " points to distribute";
+					mainCharacter.workedout = true;
 					} else { 
 					alert("you have already trained enough");
 					}
@@ -191,7 +196,9 @@
 				if (workoutPoints>0) 
 					{
 						workoutPoints = workoutPoints-5; 
+						mainCharacter.lives = mainCharacter.lives +5;
 						document.getElementById("showpPoints").innerHTML="You have " + workoutPoints + " points to distribute";
+						mainCharacter.workedout = true;
 					} else { 
 						alert("you have already trained enough");
 					}
@@ -199,17 +206,21 @@
 			);		
 			};
 
+			function test1() { 
+				alert("His Power: " + mainCharacter.power + " His Endurance: " + mainCharacter.endurance + " His Lives: " + mainCharacter.lives + " Did he work out " + mainCharacter.workedout);
+			};
+
 
 	// ending scene 5
 
+	// immediate switch from scene 4 to scene 6 without work out	
 
+		function Sc4Sc6(){
+					document.getElementById("allContent").innerHTML="<div id='sc6container'> <img src='opponent.jpg' id='Sc6opponent'> <br> <br> <button id='sc6button1'> Fight!!!! </button> </div>"; 
+					
+					// CONTINUE HERE; MAKE WINDOW.CLOSE GAMEOVER IN REFERENCE TO sc6button1!!!
+				};
 
-	function Sc4Sc6(){
-				document.getElementById("allContent").innerHTML="<div id='sc6container'> <img src='opponent.jpg' id='Sc6opponent'> <br> <br> <button id='sc6button1'> Fight!!!! </button> </div>";
-			}
-
-
-		
 
 	</script>
 
