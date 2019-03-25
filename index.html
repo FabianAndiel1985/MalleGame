@@ -155,7 +155,7 @@
 	// switch from scene 4 to scene 5 with workout function			
 
 	function Sc4Sc5(){
-				document.getElementById("allContent").innerHTML="<div id='sc5container'> <img src='workoutroom.jpg' id='workoutroom'> <img src='magican.jpg' id='magican'> <p>Now you can workout!! <span id='showpPoints'>You have 20 points to distribute </span></p> <button id='power'> Power </button> <br> <br> <button id='endurance'> Endurance</button> <br> <br> <button id='lives'> Yoga</button> <br><br> <button onclick='test1()'>Test the hero</button> </div>"; var workoutPoints = 20;
+				document.getElementById("allContent").innerHTML="<div id='sc5container'> <img src='workoutroom.jpg' id='workoutroom'> <img src='magican.jpg' id='magican'> <p>Now you can workout!! <span id='showpPoints'>You have 20 points to distribute </span></p> <button id='power'> Power </button> <br> <br> <button id='endurance'> Endurance</button> <br> <br> <button id='lives'> Yoga</button> <br><br><br><br> <button id='sc5sc6'>Proceed</button> </div>"; var workoutPoints = 20;
 
 					// Scene5 function to increase power		 
 
@@ -203,12 +203,25 @@
 						alert("you have already trained enough");
 					}
 				}
-			);		
+			);	
+
+			// switch from scene 5 to scene 6
+			
+			$("#sc5sc6").click( function() {
+				if (workoutPoints>0) {
+					alert("Wait you have to still work out");
+				}
+
+				else {
+					Sc4Sc6();
+				}
+
+			});
 			};
 
-			function test1() { 
-				alert("His Power: " + mainCharacter.power + " His Endurance: " + mainCharacter.endurance + " His Lives: " + mainCharacter.lives + " Did he work out " + mainCharacter.workedout);
-			};
+		
+
+			
 
 
 	// ending scene 5
@@ -238,7 +251,7 @@
 
 						;})
 
-					
+
 					
 					// CONTINUE HERE; MAKE WINDOW.CLOSE GAMEOVER IN REFERENCE TO sc6button1!!!
 				};
