@@ -213,13 +213,38 @@
 
 	// ending scene 5
 
-	// immediate switch from scene 4 to scene 6 without work out	
+	// immediate switch from scene 4 to scene 6 without work out
+	// general function scene6	
 
 		function Sc4Sc6(){
-					document.getElementById("allContent").innerHTML="<div id='sc6container'> <img src='opponent.jpg' id='Sc6opponent'> <br> <br> <button id='sc6button1'> Fight!!!! </button> </div>"; 
+					document.getElementById("allContent").innerHTML="<div id='sc6container'> <img src='opponent.jpg' id='Sc6opponent'> <br> <br> <button id='sc6button1'> Fight!!!! </button> </div>"; $("#sc6button1").click(function(){
+							if (mainCharacter.workedout == true) {
+								alert("Okay you shall pass");
+							}
+							// lives dedection if not workedout until GAME OVER + return to scene 4
+							else if (mainCharacter.workedout == false)
+								{
+									if (mainCharacter.lives > 0 ) {
+									mainCharacter.lives = mainCharacter.lives - 1;
+									alert("Du hast zu wenig trainiert! Jetzt hast du nur noch " + mainCharacter.lives +" Leben");
+									Sc3Sc4(); }
+
+									else {
+										alert("GAME OVER");
+										window.close();
+									}
+
+								}
+
+						;})
+
+					
 					
 					// CONTINUE HERE; MAKE WINDOW.CLOSE GAMEOVER IN REFERENCE TO sc6button1!!!
 				};
+
+
+
 
 
 	</script>
